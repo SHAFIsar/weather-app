@@ -1,61 +1,47 @@
-<?xml version='1.0' encoding='utf-8' ?>
-<extension type='component' version='3.0' method='upgrade'>
-        <name>com_chatter</name>
-        <author>Harshawardhan Natu</author>
-        <version>1.0.0</version>
-        <description>This is chat component</description>
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+	<title>GFG App</title>
+</head>
 
-        <media destination='com_chatter' folder='media'>
-                <folder>images</folder>
-                <folder>css</folder>
-                <folder>js</folder>
-                <filename>index.html</filename>
-        </media>
-
-        <files folder='components/com_chatter'>
-                <filename>chatter.php</filename>
-                <filename>index.html</filename>
-                <filename>controller.php</filename>
-                <filename>simple_html_dom.php</filename>
-                <folder>views</folder>
-                <folder>models</folder>
-        </files>
-
-        <install>
-                <sql>
-                        <file charset='utf8' driver='mysql'>install.sql</file>
-                </sql>
-        </install>
-
-        <uninstall>
-                <sql>
-                        <file charset='utf8' driver='mysql'>uninstall.sql</file>
-                </sql>
-        </uninstall>
-
-        <update>
-                <sql>
-                        <file charset='utf8' driver='mysql'>update.sql</file>
-                </sql>
-        </update>        
-
-
-        <administration>
-                <files folder='administrator/components/com_chatter'>
-                        <filename>chatter.php</filename>
-                        <filename>index.html</filename>
-                        <filename>controller.php</filename>
-                        <filename>install.sql</filename>
-                        <filename>uninstall.sql</filename>
-                        <filename>update.sql</filename>
-                </files>
-
-                <menu link='index.php?option=com_chatter'>Chat Options</menu>
-
-                <submenu>
-                        <menu link='option=com_chatter&amp;task=chat_hist'>Chat History</menu>
-                        <menu link='option=com_chatter&amp;task=block_usr'>Block User</menu>
-                </submenu>
-        </administration>
-
-</extension>
+<body>
+	<div class="container">
+		<div class="weather-card">
+			<h1 style="color: green;">
+				GeeksforGeeks
+			</h1>
+			<h3>
+				Weather App
+			</h3>
+			<input type="text" id="city-input"
+				placeholder="Enter city name">
+			<button id="city-input-btn"
+					onclick="weatherFn($('#city-input').val())">
+					Get Weather
+			</button>
+			<div id="weather-info"
+				class="animate__animated animate__fadeIn">
+				<h3 id="city-name"></h3>
+				<p id="date"></p>
+				<img id="weather-icon" src="" alt="Weather Icon">
+				<p id="temperature"></p>
+				<p id="description"></p>
+				<p id="wind-speed"></p>
+			</div>
+		</div>
+	</div>
+	<script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<script src=
+"https://momentjs.com/downloads/moment.min.js">
+	</script>
+	<script src="script2.js"></script>
+</body>
+</html>
